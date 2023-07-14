@@ -7,9 +7,9 @@
     }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/Flask.py" }
-  ],
-  "env": {
-    "SQLALCHEMY_DATABASE_URI": "sqlite:///todo.db"
-  }
+    {
+      "src": "/(.*)",
+      "dest": "Flask.py"
+    }
+  ]
 }
