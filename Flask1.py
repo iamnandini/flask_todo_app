@@ -62,4 +62,4 @@ def search():
     return render_template("search.html", matching_todo=matching_todo)
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
