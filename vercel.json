@@ -1,3 +1,19 @@
-
-	]
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "Flask1.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "todo.db",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "Flask1.py"
+    }
+  ]
 }
