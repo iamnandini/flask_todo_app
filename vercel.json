@@ -2,18 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "Flask1.py",
+      "src": "Flask.py",
       "use": "@vercel/python"
-    },
-    {
-      "src": "todo.db",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "Flask1.py"
-    }
-  ]
+    { "src": "/(.*)", "dest": "/Flask.py" }
+  ],
+  "env": {
+    "SQLALCHEMY_DATABASE_URI": "sqlite:///todo.db"
+  }
 }
