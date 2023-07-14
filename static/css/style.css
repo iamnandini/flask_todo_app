@@ -1,0 +1,36 @@
+body {
+    background: #22A699;
+    margin-top: 12vh;
+}
+
+#navbar1 {
+    background-color: #F2BE22;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+td {
+    background-color: #F29727;
+}
+
+th {
+    background-color: #F24C3D;
+    text-align: left;
+}
+
+#table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 2%;
+    border-collapse: collapse;
+    font-family: arial, sans-serif;
+
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}

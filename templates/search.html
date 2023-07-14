@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}
+Search
+{% endblock title %}
+{% block body %}
+<div class="container" id="table">
+  <h3>Search Results</h3>
+  {% if matching_todo|length==0 %}
+    No matching results found.
+  {% else %}
+    <table>
+      <thead>
+        <tr>
+          <th>SNo.</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Time</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for todo in matching_todo %}
+        <tr>
+          <td>{{ loop.index }}</td>
+          <td>{{ todo.title }}</td>
+          <td>{{ todo.desc }}</td>
+          <td>{{ todo.formatted_date()}}</td>
+          <td>
+            <a href="/update/{{ todo.sno }}" type="button" class="btn btn-outline-dark btn-sm mx-1">Update</a>
+            <a href="/delete/{{ todo.sno }}" type="button" class="btn btn-outline-dark btn-sm mx-1">Delete</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}
+</div>
+{% endblock body %}
