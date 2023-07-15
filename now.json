@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "Flask1.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "/Flask1.py" }
+    ],
+    "env": {
+      "SQLALCHEMY_DATABASE_URI": "sqlite:///todo.db"
+    }
+  }
+  
