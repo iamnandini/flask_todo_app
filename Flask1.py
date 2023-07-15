@@ -5,7 +5,7 @@ from flask_migrate import Migrate
 
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"]="sqlite:///todo.db"
+SQLALCHEMY_DATABASE_URI = "sqlite:///instance/todo.db"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
@@ -66,4 +66,4 @@ def search():
     return render_template("search.html", matching_todo=matching_todo)
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
