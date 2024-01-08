@@ -1,36 +1,111 @@
 body {
-    background: #22A699;
+    background-image: url(Back2.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     margin-top: 12vh;
 }
 
 #navbar1 {
-    background-color: #F2BE22;
+    background-color:transparent;
     position: fixed;
     top: 0;
     width: 100%;
 }
 
 td {
-    background-color: #F29727;
+    background-color: #ecb58ec9;
+    border-radius: 14px;
+    border-color: transparent;
 }
 
 th {
-    background-color: #F24C3D;
+    background-color: #004c98f6;
     text-align: left;
+    border-radius: 14px;
+    color:rgba(255, 255, 255, 0.706) ;
+    
 }
 
 #table {
     border-collapse: collapse;
     width: 100%;
     margin-top: 2%;
-    border-collapse: collapse;
-    font-family: arial, sans-serif;
+    margin-bottom: 20px;
+    font-family: cursive;
+    
+}
+td,
+th {
+    text-align: left;
+    padding: 12px;
+}
+#what{
+    font-family:cursive;
+}
+
+button:hover{
+    transform: scale(1.1);
+    color: rgb(255, 255, 255);
+    box-shadow: 4px 4px 5px  #004c98f6;
+    cursor:pointer;
+}
+button:active{
+    color: rgb(255, 179, 0);
+    box-shadow: -4px -4px 5px  #e68341e9;
+    
+}
+/* #inTable{
+    animation-name: slideleft;
+    animation-duration: 1s;
+
+} */
+
+#C1{
+    animation-name: slideleft;
+    animation-duration: 1s;
+
+}
+#C2{
+    animation-name: slideleft;
+    animation-duration: 2s;
+
+}
+#C3{
+    animation-name: slideleft;
+    animation-duration: 2s;
+
+}
+#C4{
+    animation-name: slideleft;
+    animation-duration: 2.5s;
+
+}
+#C5{
+    animation-name: slideleft;
+    animation-duration: 2.5;
 
 }
 
-td,
-th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
+
+/* .container{
+ 
+} */
+
+@keyframes slideleft {
+    /* to 
+    from
+    percentages */
+
+    from{transform:translateX(200%)}
+    
+}
+@keyframes grow{
+    to{transform: scale(2%,2%);}
+    
+}
+.ActButt:hover{
+    animation-name: grow;
+    animation-iteration-count: infinite;
 }
