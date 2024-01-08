@@ -10,26 +10,27 @@ Home
   <div class="container">
     <form action="/" method="POST">
       <div class="mb-3">
-        <label for="main" class="form-label">Add Todo Items</label>
+        <label for="main" class="form-label" id="what" style="font-family: cursive; font-size: 26px;"> What </label>
+        <label for="main" class="form-label" id="what">you don't want to forget</label>
         <input type="text" class="form-control" id="main" name="title" >
       </div>
       <div class="mb-3">
-        <label for="desc" class="form-label">Add Description</label>
+        <label for="desc" class="form-label" style="font-family: cursive;">Do you wanna <label style="font-size: 26px;">Describe it</label></label>
         <input type="text" class="form-control" name="desc" id="desc">
       </div>
-      <button type="submit" class="btn btn-outline-dark " style="background-color: #F2BE22;">Submit</button>
+      <button type="submit" class="button" style="background-color: #004c98f6; border-radius: 25px;">Submit👍</button>
     </form>
   </div><br>
   <!-- Table -->
   <div class="container" id="table">
-    <h3>Works to be done</h3>
+    <h3 >Works to be done</h3>
 
 
 
     {% if allTodo|length==0 %}
     No Record
     {% else %}
-    <table>
+    <table id="inTable">
       <thead>
         <tr>
           <th>SNo.</th>
@@ -44,13 +45,13 @@ Home
         {% for todo in allTodo%}
         <tr>
           <!-- Count of the current iteration within a loop -->
-          <td>{{loop.index}}</td>
-          <td>{{todo.title}}</td>
-          <td>{{todo.desc}}</td>
-          <td>{{todo.formatted_date()}}</td>
+          <td id="C1">{{loop.index}}</td>
+          <td id="C2" >{{todo.title}}</td>
+          <td id="C3">{{todo.desc}}</td>
+          <td id="C4">{{todo.formatted_date()}}</td>
 
           <!-- Buttons -->
-          <td>
+          <td id="C5">
             <a href="/update/{{todo.sno}}" type="button" class="btn btn-outline-dark btn-sm mx-1">Update</a>
             <a href="/delete/{{todo.sno}}" type="button" class="btn btn-outline-dark btn-sm mx-1">Delete</a>
           </td>
